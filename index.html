@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <title>Green Handmade</title>
+        
+        <!-- Google Webfonts and our stylesheet -->
+       <link rel="stylesheet" href="assets/css/styles.css" />
+<!--MENU: STARTS-->
+         <link rel="stylesheet" type="text/css" href="assets/css/demo-menu.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style-menu.css" />
+		 <script type="text/javascript" src="assets/js/KeepMenu.js"></script>
+
+<!--MENU: ENDS-->
+        
+<!--EFFECT: STARTS-->
+		<link rel="stylesheet" type="text/css" href="assets/css/default-about.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/component-about.css" />
+<!--EFFECT: ENDS-->
+<!--GALLERY: STARTS-->
+	<link rel="stylesheet" type="text/css" href="assets/css/common-gallery.css" />
+		 <link rel="stylesheet" type="text/css" href="assets/css/style-gallery.css" />
+	<script type="text/javascript" src="assets/js/modernizr.custom.79639.js"></script> 
+
+<!--GALLERY: ENDS-->
+
+<!--VIDEO: STARTS-->
+<!--		<link rel="stylesheet" type="text/css" href="assets/css/default-video.css" />
+-->		<link rel="stylesheet" type="text/css" href="assets/css/bookblock.css" />
+		<!-- custom demo style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/demo-video.css" />
+		<script src="assets/js/modernizr.custom.video.js"></script>
+
+<!--VIDEO: ENDS-->
+
+<!--CONTACT FORM: STARTS-->
+
+	<script  src="assets/js/jquery-1.3.2.min.js"></script>
+<style>
+
+body, div, h1,h2, form, fieldset, input, textarea, footer,p {
+	margin: 0; padding: 0; border: 0; outline: none;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {}
+p {text-shadow:0 1px 0 #fff; font-size:24px;}
+#wrap {
+	width: 450px;
+/*	height: 800px;*/
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0;
+/*	margin-left: -200px;*/
+	margin-left: -185px;
+}
+#logo-contact {
+	margin-top: -30px;
+	left: -30px;
+	top: -30px;
+	margin-left: -30px;
+}
+/*h1 {
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 48px;
+	text-shadow: 0 1px 0 #ede8d9;
+	color: #093;
+}
+*/
+
+	#form_wrap { overflow:hidden; height:400px; position:relative; top:100px;
+		-webkit-transition: all 1s ease-in-out .3s;
+		-moz-transition: all 1s ease-in-out .3s;
+		-o-transition: all 1s ease-in-out .3s;
+		transition: all 1s ease-in-out .3s;}
+	
+	#form_wrap:before {
+	content: "";
+	position: absolute;
+	bottom: 128px;
+	left: 0px;
+	width: 450px;
+	height: 268px;
+	background-image: url(assets/img/Contact/before.png);
+	background-repeat: no-repeat;
+}
+	
+	#form_wrap:after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 450px;
+	height: 220px;
+	background-image: url(assets/img/Contact/after.png);
+	background-repeat: no-repeat;
+}
+
+	#form_wrap.hide:after, #form_wrap.hide:before {display:none; }
+	#form_wrap:hover {height:750px;top:-200px;}
+
+
+	form {background:#f7f2ec url('assets/img/Contact/letter_bg.png'); 
+		position:relative;top:200px;overflow:hidden;
+		height:200px;width:400px;margin:10px auto;padding:10px; 
+		border: 1px solid #fff;
+		border-radius: 3px; 
+		-moz-border-radius: 3px; -webkit-border-radius: 3px;
+		box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+		-moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
+		-webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+		-webkit-transition: all 1s ease-in-out .3s;
+		-moz-transition: all 1s ease-in-out .3s;
+		-o-transition: all 1s ease-in-out .3s;
+		transition: all 1s ease-in-out .3s;}
+
+
+		#form_wrap:hover form {height:530px;}
+
+		label {
+			margin: 11px 20px 0 0; 
+			font-size: 16px; color: #b3aba1;
+			text-transform: uppercase; 
+			text-shadow: 0px 1px 0px #fff;
+		}
+
+		input[type=text], textarea {
+			font: 14px normal normal uppercase helvetica, arial, serif;
+			color: #7c7873;background:none;
+			width: 380px; height: 36px; padding: 0px 10px; margin: 0 0 10px 0;
+			border:1px solid #f8f5f1;
+			-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+			-moz-box-shadow: inset 0px 0px 1px #726959;
+			-webkit-box-shadow:  inset 0px 0px 1px #b3a895; 
+			box-shadow:  inset 0px 0px 1px #b3a895;
+		}	
+
+		textarea { height: 80px; padding-top:14px;}
+
+		textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35);}
+
+		#form_wrap input[type=submit] {
+			position:relative;font-family: 'Myriad Pro'; 
+			font-size:24px; color: #7c7873;text-shadow:0 1px 0 #fff;
+			width:100%; text-align:center;opacity:0;
+			background:none;
+			cursor: pointer;
+			-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; 
+			-webkit-transition: opacity .6s ease-in-out 0s;
+			-moz-transition: opacity .6s ease-in-out 0s;
+			-o-transition: opacity .6s ease-in-out 0s;
+			transition: opacity .6s ease-in-out 0s;
+		}
+
+		#form_wrap:hover input[type=submit] {z-index:1;opacity:1;
+			-webkit-transition: opacity .5s ease-in-out 1.3s;
+			-moz-transition: opacity .5s ease-in-out 1.3s;
+			-o-transition: opacity .5s ease-in-out 1.3s;
+			transition: opacity .5s ease-in-out 1.3s;}
+
+			#form_wrap:hover input:hover[type=submit] {color:#435c70;}
+.welcome-txt img {
+	margin-top: 480px;
+	margin-left: -250px;
+}
+.icon-wel img {
+	margin-top: 480px;
+	margin-left: 280px;
+}
+.icon-wel2 img {
+	margin-top: 450px;
+	margin-left: -5px;
+}
+.frame2 .nav-gallery {
+	height: 500px;
+	width: 800px;
+}
+.frame5 .icons {
+	height: 120px;
+	width: 540px;
+	margin-top: 40px;
+}
+.frame5 .icons ul {
+}
+.frame1 .nav-click {
+	height: 600px;
+	width: 700px;
+}
+#subvideo {
+	left: 185px;
+	top: 100px;
+	margin-top: 100px;
+}
+#subgallery {
+	margin-top: 320px;
+	left: 185px;
+	top: 320px;
+}
+#arrow-v {
+	margin-top: 145px;
+	left: 380px;
+}
+#arrow-d {
+	margin-top: 255px;
+	left: 330px;
+}
+#project {
+	margin-top: -7px;
+	top: -7px;
+}
+#home-infor {
+	margin-top: 340px;
+	left: -533px;
+	top: 340px;
+	margin-left: -533px;
+}
+#gallery-infor {
+	margin-top: 260px;
+	margin-left: -90px;
+	left: -90px;
+	top: 260px;
+}
+#video-infor {
+	margin-top: 210px;
+	margin-left: -88px;
+	left: -88px;
+	top: 210px;
+}
+#contact-infor {
+	margin-top: 240px;
+	margin-left: -457px;
+	left: -457px;
+	top: 240px;
+}
+#sitemap-infor {
+	margin-top: 210px;
+	margin-left: -88px;
+	left: -88px;
+	top: 210px;
+}
+</style>
+
+<!--CONTACT FORM: ENDS-->
+
+<!--TOOLTIP SITEMAP: STARTS-->
+<link rel="stylesheet" type="text/css" href="assets/css/demo-tooltip.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style-tooltip.css" />
+<!--		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+-->
+<!--TOOLTIP SITEMAP: ENDS-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+    
+    <body onLoad="MM_preloadImages('assets/img/Button/Hand-Stamp-Over.png','assets/img/Button/Silk-Material-Over.png','assets/img/Button/Paper-Over.png','assets/img/Button/Others-Over.png')">
+    <!--MENU: STARTS-->
+    
+                   <div class="content">
+              <ul class="ca-menu">
+                  <li>
+                        <a id="1" href="#home" class="selected" onclick="SetSelected(this.id)" onmouseover="SetHover(this.id)" onmouseout="SetNormal(this.id)">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">HOME</h2>
+                                <h3 class="ca-sub">What do we do</h3>
+                            </div>
+                    </a>
+                </li>
+                    <li>
+                        <a id="2" href="#gallery-nav" onclick="SetSelected(this.id)" onmouseover="SetHover(this.id)" onmouseout="SetNormal(this.id)">
+                    
+                            <div class="ca-content">
+                                <h2 class="ca-main">GALLERY</h2>
+                                <h3 class="ca-sub">What have we done</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="3" href="#video" onclick="SetSelected(this.id)" onmouseover="SetHover(this.id)" onmouseout="SetNormal(this.id)">
+                  
+                        <div class="ca-content">
+                                <h2 class="ca-main">VIDEO</h2>
+                                <h3 class="ca-sub">How do we work</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="4" href="#contact" onclick="SetSelected(this.id)" onmouseover="SetHover(this.id)" onmouseout="SetNormal(this.id)">
+                            
+                            <div class="ca-content">
+                                <h2 class="ca-main">CONTACT</h2>
+                                <h3 class="ca-sub">Get in touch with us</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="5" href="#sitemap" onclick="SetSelected(this.id)" onmouseover="SetHover(this.id)" onmouseout="SetNormal(this.id)">
+                            
+                            <div class="ca-content">
+                                <h2 class="ca-main">SITEMAP</h2>
+                                <h3 class="ca-sub">Sitemap of website</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-1.7.1.min.js"></script>
+    
+    <!--MENU: ENDS-->
+    
+    
+		<div id="impress" class="impress-not-supported">
+			
+		  <div id="home" class="step" data-x="0" data-y="0">
+            <div class="frame1">
+  <a class="welcome-txt"><img src="assets/img/Welcome-Text.png"/></a>
+  <a class="icon-wel"><img src="assets/img/chris-3.gif"/></a>
+  <a class="icon-wel2"><img src="assets/img/dude-eyes.gif"/></a>
+ <img src="assets/img/Logo-GreenHandmade.png" id="logo-home"/>
+   <img src="assets/img/Images/Home-Infor.png" id="home-infor"/>
+     <!--START EFFECT-->
+  <div class="md-modal md-effect-4" id="modal-4">
+			<div class="md-content">
+				<h3>Green Handmade</h3>
+				<div>
+					<!--<p>This is a modal window. You can do the following things with it:</p>-->
+					<ul>
+					  <strong>Greenhandmade</strong><strong>.com:</strong> is the brainchild of two friends from Devon who have brought together a whole community of makers, and sell high quality craft directly to the public - online.
+						<li><strong>Sarah James:</strong> is no stranger to makers as organiser of the highly successful Contemporary Craft Fair. Sarah had wanted to set up a selling website for some time.</li>
+					</ul>
+					<button class="md-close">Close</button>
+				</div>
+			</div>
+		</div>
+		
+
+			<!-- Top Navigation -->
+
+
+					<button class="md-trigger" data-modal="modal-4">About Us</button>
+			
+
+<!-- /container -->
+
+
+
+		<script src="assets/js/classie.js"></script>
+		<script src="assets/js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+        <!--ENDS EFFECT-->
+    
+    <!--CLICK ME: STARTS-->
+    
+    <!--CLICK ME: ENDS-->
+
+    
+</div>
+
+
+
+          </div>
+		    
+		    <div id="gallery-nav" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="190">
+
+<div class="frame2">
+<img src="assets/img/Logo-GreenHandmade.png" id="logo"/>
+<!--GALLERY: STARTS-->
+<div class="nav-gallery">
+
+<table border="0" id="project">
+              <tr>
+                <td height="455">
+             <div id="gallery"><iframe height="455px" width="550px" name="gallery"></iframe>
+             </div>
+             </td>
+             <td width="60">
+             <div id="group">
+             <a href="GALLERY/Hand Stamp/HandStamp.html" target="gallery" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('handstamp','','assets/img/Button/Hand-Stamp-Over.png',1)"><img src="assets/img/Button/Hand-Stamp.png" alt="hs" width="100" height="60" id="handstamp"></a></br>
+             <a href="GALLERY/Silk Material/SilkMaterial.html" target="gallery" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('silkmaterial','','assets/img/Button/Silk-Material-Over.png',1)"><img src="assets/img/Button/Silk-Material.png" width="100" height="60" id="silkmaterial"></a></br>
+             <a href="GALLERY/Paper/Paper.html" target="gallery" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('paper','','assets/img/Button/Paper-Over.png',1)"><img src="assets/img/Button/Paper.png" width="100" height="60" id="paper"></a></br>
+             <a href="GALLERY/Others/Others.html" target="gallery" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('others','','assets/img/Button/Others-Over.png',1)"><img src="assets/img/Button/Others.png" width="100" height="60" id="others"></a></br>
+             
+</div>
+
+</td>
+            </tr>
+        </table>
+
+   
+
+</div>
+<!--GALLERY: ENDS-->
+<img src="assets/img/Images/Gallery-Infor.png" id="gallery-infor"/>
+</div>
+		    </div>
+		    
+		    <div id="video" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">
+<div class="frame3">
+<img src="assets/img/Logo-GreenHandmade.png" id="logo-v"/>
+<img src="assets/img/Images/Video-Infor.png" id="video-infor"/>
+<!--VIDEO: STARTS-->
+				<div class="bb-custom-wrapper">
+<!--					<h3>Video</h3>-->
+					<div id="bb-bookblock" class="bb-bookblock">
+						<div class="bb-item">
+                        
+                          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="500" height="350" id="FLVPlayer">
+                            <param name="movie" value="FLVPlayer_Progressive.swf" />
+                            <param name="quality" value="high">
+                            <param name="wmode" value="opaque">
+                            <param name="scale" value="noscale">
+                            <param name="salign" value="lt">
+                            <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V1&amp;autoPlay=false&amp;autoRewind=false" />
+                            <param name="swfversion" value="8,0,0,0">
+                            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                            <param name="expressinstall" value="Scripts/expressInstall.swf">
+                            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="FLVPlayer_Progressive.swf" width="500" height="350">
+                              <!--<![endif]-->
+                              <param name="quality" value="high">
+                              <param name="wmode" value="opaque">
+                              <param name="scale" value="noscale">
+                              <param name="salign" value="lt">
+                              <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V1&amp;autoPlay=false&amp;autoRewind=false" />
+                              <param name="swfversion" value="8,0,0,0">
+                              <param name="expressinstall" value="Scripts/expressInstall.swf">
+                              <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                              <!--<div>
+                                <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                                <p><a href="#"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+                              </div>-->
+                              <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                          </object>
+                      </div>
+						<div class="bb-item">
+                          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="500" height="350" id="FLVPlayer1">
+                            <param name="movie" value="FLVPlayer_Progressive.swf" />
+                            <param name="quality" value="high">
+                            <param name="wmode" value="opaque">
+                            <param name="scale" value="noscale">
+                            <param name="salign" value="lt">
+                            <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V2&amp;autoPlay=false&amp;autoRewind=false" />
+                            <param name="swfversion" value="8,0,0,0">
+                            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                            <param name="expressinstall" value="Scripts/expressInstall.swf">
+                            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="FLVPlayer_Progressive.swf" width="500" height="350">
+                              <!--<![endif]-->
+                              <param name="quality" value="high">
+                              <param name="wmode" value="opaque">
+                              <param name="scale" value="noscale">
+                              <param name="salign" value="lt">
+                              <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V2&amp;autoPlay=false&amp;autoRewind=false" />
+                              <param name="swfversion" value="8,0,0,0">
+                              <param name="expressinstall" value="Scripts/expressInstall.swf">
+                              <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                              <div>
+                                <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+                              </div>
+                              <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                          </object>
+                      </div>
+						<div class="bb-item">
+                          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="500" height="350" id="FLVPlayer2">
+                            <param name="movie" value="FLVPlayer_Progressive.swf" />
+                            <param name="quality" value="high">
+                            <param name="wmode" value="opaque">
+                            <param name="scale" value="noscale">
+                            <param name="salign" value="lt">
+                            <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V3&amp;autoPlay=false&amp;autoRewind=false" />
+                            <param name="swfversion" value="8,0,0,0">
+                            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                            <param name="expressinstall" value="Scripts/expressInstall.swf">
+                            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="FLVPlayer_Progressive.swf" width="500" height="350">
+                              <!--<![endif]-->
+                              <param name="quality" value="high">
+                              <param name="wmode" value="opaque">
+                              <param name="scale" value="noscale">
+                              <param name="salign" value="lt">
+                              <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V3&amp;autoPlay=false&amp;autoRewind=false" />
+                              <param name="swfversion" value="8,0,0,0">
+                              <param name="expressinstall" value="Scripts/expressInstall.swf">
+                              <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                              <div>
+                                <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+                              </div>
+                              <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                          </object>
+                        </div>
+						<div class="bb-item">
+                          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="500" height="350" id="FLVPlayer3">
+                            <param name="movie" value="FLVPlayer_Progressive.swf" />
+                            <param name="quality" value="high">
+                            <param name="wmode" value="opaque">
+                            <param name="scale" value="noscale">
+                            <param name="salign" value="lt">
+                            <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V4&amp;autoPlay=false&amp;autoRewind=false" />
+                            <param name="swfversion" value="8,0,0,0">
+                            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                            <param name="expressinstall" value="Scripts/expressInstall.swf">
+                            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="FLVPlayer_Progressive.swf" width="500" height="350">
+                              <!--<![endif]-->
+                              <param name="quality" value="high">
+                              <param name="wmode" value="opaque">
+                              <param name="scale" value="noscale">
+                              <param name="salign" value="lt">
+                              <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=assets/video/V4&amp;autoPlay=false&amp;autoRewind=false" />
+                              <param name="swfversion" value="8,0,0,0">
+                              <param name="expressinstall" value="Scripts/expressInstall.swf">
+                              <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                              <div>
+                                <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+                              </div>
+                              <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                          </object>
+                        </div>
+					</div>
+					<nav><a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
+						<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+						<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+						<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+					</nav>
+				</div>
+                
+	  <script src="assets/js/jquerypp.custom.js"></script>
+	  <script src="assets/js/jquery.bookblock.js"></script>
+	  <script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next' ),
+						$navPrev : $( '#bb-nav-prev' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 800,
+							shadowSides : 0.8,
+							shadowFlip : 0.7
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script>
+	  <script>
+				Page.init();
+		</script>
+            <script type="text/javascript">
+swfobject.registerObject("FLVPlayer");
+swfobject.registerObject("FLVPlayer");
+swfobject.registerObject("FLVPlayer1");
+swfobject.registerObject("FLVPlayer2");
+swfobject.registerObject("FLVPlayer3");
+swfobject.registerObject("FLVPlayer1");
+    </script>
+<!--VIDEO: ENDS-->
+
+</div>
+		    </div>
+		    
+	      <div id="contact" class="step" data-x="-200" data-y="1500" data-rotate="180">
+<div class="frame4">
+<img src="assets/img/Logo-GreenHandmade.png" id="logo-contact"/>
+  <!--CONTACT: STARTS-->
+  
+  	<div id="wrap">
+<!--		<h1>Get in touch with us</h1>-->
+			<div id='form_wrap'>
+			<form>
+            	<label for="email">Your Message: </label>
+				<textarea  name="message" value="Your Message" id="message" ></textarea>	
+				<label for="name">Name: </label>
+				<input type="text" name="name" value="" id="name" />
+				<label for="email">Email: </label>
+				<input type="text" name="email" value="" id="email" />
+				<input type="submit" name ="submit" value="Now, I send, thanks!" onClick="confirmation()"/>
+			</form>
+                        <script type="text/javascript">
+
+function confirmation() {
+	var answer = confirm("Completed! Your message has sent. Come back our website and go on enjoying!")
+}
+
+</script>
+		</div>
+	</div>
+  <!--CONTACT: ENDS-->
+ 
+ <img src="assets/img/Contact/Information-Contact.png"/>
+ <img src="assets/img/Images/Contact-Infor.png" id="contact-infor"/>
+  
+</div>
+	      </div>
+		    
+		   
+		    <div id="sitemap" class="step" data-x="-1200" data-y="1000" data-scale="0.8" data-rotate="270">
+<div class="frame5"> 
+<img src="assets/img/Logo-GreenHandmade.png" id="logo-s"/><img src="assets/img/Sitemap/Arrow-Up.png" id="arrow-v"/>
+     <img src="assets/img/Images/Sitemap-Infor.png" id="sitemap-infor"/>
+<!--TOOLTIP SITEMAP: STARTS-->
+<img src="assets/img/Sitemap/Video.png" id="subvideo"/>
+<div class="container">
+			<ul class="tt-wrapper">
+			  <li><a class="home" href="#home"><span>Home</span></a></li>
+				<li><a class="gallery" href="#gallery-nav"><span>Gallery</span></a></li>
+				<li><a class="video" href="#video"><span>Video</span></a></li>
+				<li><a class="contact" href="#contact"><span>Contact</span></a></li>
+				<li><a class="sitemap" href="#sitemap"><span>Sitemap</span></a></li>				
+			</ul>
+      </div>
+
+      <img src="assets/img/Sitemap/Gallery.png" id="subgallery"/>
+      <img src="assets/img/Sitemap/Arrow-Down.png" id="arrow-d"/>
+      
+<!--TOOLTIP SITEMAP: ENDS-->
+
+</div>
+		</div>
+		</div> 
+
+	<!--<a id="arrowLeft" class="arrow">&lt;</a>
+		<a id="arrowRight" class="arrow">&gt;</a>-->
+
+        <footer>
+	        <h2><i>Copyright © 2013 by Team 1.</i> All rights reserved.</h2>
+<a href"http://www.facebook.com" class="tzine"><img src="assets/img/Icons/Icon.png"/></a
+        ></footer>
+        
+        <!-- JavaScript includes -->
+	<script src="assets/js/impress.js"></script>
+	<script src="assets/js/script.js"></script>
+    <!--Disable Mouse Wheel: STARTS-->
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$(window).bind("mousewheel", function() {
+			if ($.browser.webkit === true) {
+				return false;
+			}
+		});
+	})
+	</script>
+    <!--Disable Mouse Wheel: ENDS-->
+</body>
+</html>
+

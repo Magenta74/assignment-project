@@ -1,0 +1,77 @@
+/*html,body {
+	margin:0;
+	padding:0;
+	height: 100%;
+}*/
+/*table {
+	border-collapse:collapse;
+	border-spacing:0;
+}*/
+fieldset,img { 
+	border:0;
+}
+ol,ul {
+	list-style:none;
+}
+q:before,q:after {
+	content:'';
+}
+/* General Demo Style */
+body{
+	font-family: 'Myriad Pro';
+/*	background: #f8fafe url(../images/bg.jpg) repeat top left;*/
+	font-weight: 400;
+	font-size: 15px;
+	color: #3a2127;
+	
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	width: 500px;
+	height: 100px;
+	position: relative;
+	text-align: center;
+	margin-left: 0px;
+	left: -80px;
+	top: 255px;
+/*	margin-top: 200px;*/
+}
+#gallery {
+	margin-left: -180px;
+	left: -180px;
+	margin-top: 115px;
+	top: 115px;
+	background-image: url(../img/Gallery/bg.png);
+	background-repeat: no-repeat;
+}
+
+#handstamp {
+	margin-top: 220px;
+	top: 220px;
+	margin-left: 340px;
+	left: 340px;
+}
+
+#silkmaterial {
+	margin-top: 280px;
+	top: 280px;
+	margin-left: 340px;
+	left: 340px;
+}
+
+#paper {
+	margin-top: 340px;
+	top: 340px;
+	margin-left: 340px;
+	left: 340px;
+}
+
+#others {
+	margin-top: 400px;
+	top: 400px;
+	margin-left: 340px;
+	left: 340px;
+}
